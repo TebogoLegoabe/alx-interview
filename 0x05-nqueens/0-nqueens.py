@@ -4,6 +4,7 @@ N queens
 """
 import sys
 
+
 def is_safe(board, row, col, n):
     """Check if there is a queen in the same row on the left side"""
     for i in range(col):
@@ -13,15 +14,17 @@ def is_safe(board, row, col, n):
             return False
     return True
 
+
 def solve_nqueens_util(board, col, n):
     if col == n:
         print([[i, board[i]] for i in range(n)])
         return
-    
+
     for i in range(n):
         if is_safe(board, i, col, n):
             board[col] = i
             solve_nqueens_util(board, col + 1, n)
+
 
 def solve_nqueens(n):
     if not isinstance(n, int):
@@ -33,6 +36,7 @@ def solve_nqueens(n):
         sys.exit(1)
 
     solve_nqueens_util([0] * n, 0, n)
+
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
