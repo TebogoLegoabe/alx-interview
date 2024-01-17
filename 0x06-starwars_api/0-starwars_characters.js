@@ -35,5 +35,5 @@ if (process.argv.length > 2) {
     .then(names => console.log(names.join('\n')))
     .catch(err => console.error(err));
 } else {
-  console.error("Usage: ./script.js <Movie ID>");
+  console.error('Usage: ./script.js <Movie ID>');
 }

@@ -5,12 +5,12 @@ copy all and paste
 """
 
 
-def  minOperations(n):
+def minOperations(n):
     """
     method that calculates the fewest numbers of operations needed to result
     in exactly n H characters in the file.
 
-    Return: 
+    Returnis
     integer
     if n is impossible to achieve, return 0
     """
