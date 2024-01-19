@@ -1,7 +1,7 @@
 #!/usr/bin/node
 const request = require('request');
 
-function getMovieCharacters(movieId) {
+function getMovieCharacters (movieId) {
   const apiUrl = `https://swapi.dev/api/films/${movieId}/`;
 
   return new Promise((resolve, reject) => {
