@@ -7,7 +7,7 @@ Function that returns the perimeter of island described in grid
 def island_perimeter(grid):
     if not grid:
         return 0
-    
+
     perimeter = 0
     rows = len(grid)
     col = len(grid[0])
