@@ -2,12 +2,13 @@
 """Prime game module.
 """
 
+
 def isWinner(x, nums):
     """Determines the winner of a prime game session with `x` rounds."""
-    
+
     if x < 1 or not nums:
         return None
-    
+
     def generate_primes(limit):
         """Generates prime numbers up to the given limit."""
         primes = [True] * (limit + 1)
@@ -17,11 +18,11 @@ def isWinner(x, nums):
                 for j in range(i*i, limit + 1, i):
                     primes[j] = False
         return primes
-    
+
     def count_primes(nums, primes):
         """Counts prime numbers in the given list."""
         return sum(1 for num in nums if primes[num])
-    
+
     marias_wins, bens_wins = 0, 0
     max_num = max(nums)
     primes = generate_primes(max_num)
